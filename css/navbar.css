@@ -1,0 +1,77 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100svh;
+  background: #333;
+  padding: 2rem 5rem;
+}
+
+.ham {
+  display: none;
+}
+
+ul > li {
+  list-style: none;
+}
+
+ul {
+  display: flex;
+  gap: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 2rem;
+  }
+
+  .ham {
+    cursor: pointer;
+    display: block;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .logo.active {
+    z-index: -2;
+  }
+
+  ul {
+    position: fixed;
+    padding: 0;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: red;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+
+  ul::after {
+    position: absolute;
+    content: url("../images/icon-close.svg");
+    top: 0;
+    right: 0;
+  }
+}
