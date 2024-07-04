@@ -44,34 +44,34 @@ a {
   .ham {
     cursor: pointer;
     display: block;
+    z-index: 3;
   }
-
+  .logo{
+    max-width: 50%;
+    z-index: 1;
+  }
   .container {
     position: relative;
   }
 
-  .logo.active {
-    z-index: -2;
-  }
-
-  ul {
+  ul{
     position: fixed;
     padding: 0;
     left: 0;
     top: 0;
     height: 100%;
     width: 100%;
-    background: red;
+    background: hsl(0, 0%, 0%);
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    z-index: 1;
+    padding-left: 2rem;
+    font-size: 1.75rem;
+    text-transform: uppercase;
   }
-
-  ul::after {
-    position: absolute;
-    content: url("../images/icon-close.svg");
-    top: 0;
-    right: 0;
+  .navbar_links{
+    display: none;
+  }
+  .navbar_links.active{
+    display: flex;
   }
 }
