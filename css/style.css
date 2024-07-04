@@ -1,0 +1,14 @@
+.hero{
+    background-image: url("../images/mobile/image-hero.jpg");
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.main_title{
+    text-transform: uppercase;
+    color: white;
+    font-size: 2.5rem;
+    padding: 1rem;
+    outline: 3px solid white;
+    margin-top: 50%;
+}

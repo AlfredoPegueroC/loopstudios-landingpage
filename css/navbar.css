@@ -1,15 +1,35 @@
+* {
+  font: inherit;
+}
 *,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
+*::before,
+*::after {
   box-sizing: border-box;
 }
-
+img,
+video,
+svg {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+body {
+  margin: 0;
+  min-height: 100dvh;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+p {
+  text-wrap: pretty;
+}
 body {
   min-height: 100svh;
-  background: #333;
-  padding: 2rem 5rem;
 }
 
 .ham {
@@ -37,29 +57,25 @@ a {
 }
 
 @media (max-width: 768px) {
-  body {
-    padding: 2rem;
-  }
-
   .ham {
     cursor: pointer;
     display: block;
-    z-index: 3;
+    /* z-index: 3; */
   }
-  .logo{
+  .logo {
     max-width: 50%;
-    z-index: 1;
+    /* z-index: 1; */
   }
   .container {
     position: relative;
   }
 
-  ul{
+  ul {
     position: fixed;
     padding: 0;
     left: 0;
-    top: 0;
-    height: 100%;
+    top: -2rem;
+    min-height: 100svh;
     width: 100%;
     background: hsl(0, 0%, 0%);
     flex-direction: column;
@@ -68,10 +84,10 @@ a {
     font-size: 1.75rem;
     text-transform: uppercase;
   }
-  .navbar_links{
+  .navbar_links {
     display: none;
   }
-  .navbar_links.active{
+  .navbar_links.active {
     display: flex;
   }
 }
