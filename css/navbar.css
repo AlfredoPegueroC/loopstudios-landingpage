@@ -70,7 +70,7 @@ a {
     position: relative;
   }
 
-  ul {
+  .navbar_links {
     position: fixed;
     padding: 0;
     left: 0;
